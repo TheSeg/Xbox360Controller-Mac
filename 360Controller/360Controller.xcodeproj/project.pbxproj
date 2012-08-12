@@ -176,6 +176,9 @@
 /* Begin PBXProject section */
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+			};
 			buildConfigurationList = 3BBDC686097938A90023AAD8 /* Build configuration list for PBXProject "360Controller" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -262,10 +265,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1.0.0d11;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -275,7 +278,6 @@
 				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
 				MODULE_NAME = com.mice.driver.Xbox360Controller;
 				MODULE_VERSION = 1.0.0d11;
-				PREBINDING = NO;
 				PRODUCT_NAME = 360Controller;
 				SDKROOT = "";
 				WRAPPER_EXTENSION = kext;
@@ -291,9 +293,9 @@
 					i386,
 					x86_64,
 				);
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d11;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -303,7 +305,6 @@
 				LD_GENERATE_MAP_FILE = NO;
 				MODULE_NAME = com.mice.driver.Xbox360Controller;
 				MODULE_VERSION = 1.0.0d11;
-				PREBINDING = NO;
 				PRODUCT_NAME = 360Controller;
 				WRAPPER_EXTENSION = kext;
 				ZERO_LINK = NO;
@@ -313,6 +314,7 @@
 		3BBDC685097938A90023AAD8 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d11;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
@@ -322,7 +324,6 @@
 				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
 				MODULE_NAME = com.mice.driver.Xbox360Controller;
 				MODULE_VERSION = 1.0.0d11;
-				PREBINDING = NO;
 				PRODUCT_NAME = 360Controller;
 				WRAPPER_EXTENSION = kext;
 			};
