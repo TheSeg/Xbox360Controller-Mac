@@ -4,6 +4,8 @@ Copyright (C) 2006-2012 Colin Munro
 
 http://tattiebogle.net/index.php/ProjectRoot/Xbox360Controller
 
+This particular GIT repository is maintained by [John "Seg" Seggerson](http://segonmedia.com).
+
 About
 ---------------------
 This driver supports the Microsoft Xbox 360 controller, including access to rumble motors and LEDs, on the Mac OS X platform. It includes a plugin for the Apple Force Feedback Framework so some games will be able to activate them, along with a Preference Pane with which allows you to test everything is installed correctly. Both wired 360 controllers connected via USB, and wireless 360 controllers connected via the Wireless Gaming Receiver for Windows, are supported.
