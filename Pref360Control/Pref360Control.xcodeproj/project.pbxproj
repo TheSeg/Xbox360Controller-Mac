@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3B04BE7313763D04005FA9F8 /* DeviceLister.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B04BE7113763D04005FA9F8 /* DeviceLister.h */; };
 		3B04BE7413763D04005FA9F8 /* DeviceLister.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04BE7213763D04005FA9F8 /* DeviceLister.m */; };
-		3B04BEA61376416D005FA9F8 /* DriverTool in Resources */ = {isa = PBXBuildFile; fileRef = 3B04BEA51376416D005FA9F8 /* DriverTool */; };
 		3B47D9ED0B93C2BF00F200B8 /* battNone.tif in Resources */ = {isa = PBXBuildFile; fileRef = 3B47D9EC0B93C2BF00F200B8 /* battNone.tif */; };
 		3B47D9F20B93C31400F200B8 /* batt1.tif in Resources */ = {isa = PBXBuildFile; fileRef = 3B47D9EE0B93C31400F200B8 /* batt1.tif */; };
 		3B47D9F30B93C31400F200B8 /* batt0.tif in Resources */ = {isa = PBXBuildFile; fileRef = 3B47D9EF0B93C31400F200B8 /* batt0.tif */; };
@@ -32,6 +31,7 @@
 		3BC41F32096C85CB00664A42 /* DeviceItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BC41F30096C85CB00664A42 /* DeviceItem.h */; };
 		3BC41F33096C85CB00664A42 /* DeviceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC41F31096C85CB00664A42 /* DeviceItem.m */; };
 		3BC41F47096C8D0300664A42 /* ForceFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC41F46096C8D0300664A42 /* ForceFeedback.framework */; };
+		8A29B28915D8789600270765 /* DriverTool in Resources */ = {isa = PBXBuildFile; fileRef = 8A29B28815D8789600270765 /* DriverTool */; };
 		8D202CEA0486D31800D8A456 /* Pref360Control_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCFA20370C41700C91783 /* Pref360Control_Prefix.pch */; };
 		8D202CEB0486D31800D8A456 /* Pref360ControlPref.h in Headers */ = {isa = PBXBuildFile; fileRef = F506C03C013D9D7901CA16C8 /* Pref360ControlPref.h */; };
 		8D202CED0486D31800D8A456 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
@@ -50,7 +50,6 @@
 		32DBCFA20370C41700C91783 /* Pref360Control_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pref360Control_Prefix.pch; sourceTree = "<group>"; };
 		3B04BE7113763D04005FA9F8 /* DeviceLister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceLister.h; sourceTree = "<group>"; };
 		3B04BE7213763D04005FA9F8 /* DeviceLister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceLister.m; sourceTree = "<group>"; };
-		3B04BEA51376416D005FA9F8 /* DriverTool */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = DriverTool; path = ../DriverTool/build/Release/DriverTool; sourceTree = SOURCE_ROOT; };
 		3B47D9EC0B93C2BF00F200B8 /* battNone.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = battNone.tif; sourceTree = "<group>"; };
 		3B47D9EE0B93C31400F200B8 /* batt1.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = batt1.tif; sourceTree = "<group>"; };
 		3B47D9EF0B93C31400F200B8 /* batt0.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = batt0.tif; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		3BC41F30096C85CB00664A42 /* DeviceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceItem.h; sourceTree = "<group>"; };
 		3BC41F31096C85CB00664A42 /* DeviceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceItem.m; sourceTree = "<group>"; };
 		3BC41F46096C8D0300664A42 /* ForceFeedback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ForceFeedback.framework; path = /System/Library/Frameworks/ForceFeedback.framework; sourceTree = "<absolute>"; };
+		8A29B28815D8789600270765 /* DriverTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; name = DriverTool; path = ../Debug/DriverTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D202CF70486D31800D8A456 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D202CF80486D31800D8A456 /* Pref360Control.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pref360Control.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		F506C035013D953901CA16C8 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
@@ -122,7 +122,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3B04BEA51376416D005FA9F8 /* DriverTool */,
+				8A29B28815D8789600270765 /* DriverTool */,
 				8D202CF70486D31800D8A456 /* Info.plist */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
 				F506C040013D9D8001CA16C8 /* Pref360ControlPref.tiff */,
@@ -281,7 +281,7 @@
 				3B47D9F30B93C31400F200B8 /* batt0.tif in Resources */,
 				3B47D9F40B93C31400F200B8 /* batt3.tif in Resources */,
 				3B47D9F50B93C31400F200B8 /* batt2.tif in Resources */,
-				3B04BEA61376416D005FA9F8 /* DriverTool in Resources */,
+				8A29B28915D8789600270765 /* DriverTool in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +336,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3BBDC6A6097946B50023AAD8 /* Development */ = {
+		3BBDC6A6097946B50023AAD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
@@ -377,9 +377,9 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
-		3BBDC6A7097946B50023AAD8 /* Deployment */ = {
+		3BBDC6A7097946B50023AAD8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -414,67 +414,25 @@
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = NO;
 			};
-			name = Deployment;
+			name = Release;
 		};
-		3BBDC6A8097946B50023AAD8 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
-				"GCC_ENABLE_OBJC_GC[arch=x86_64]" = supported;
-				GCC_ENABLE_TRIGRAPHS = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Pref360Control_Prefix.pch;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
-				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
-				GCC_WARN_UNKNOWN_PRAGMAS = NO;
-				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
-				LIBRARY_SEARCH_PATHS = "";
-				LIBRARY_STYLE = Bundle;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = (
-					"-bundle",
-					"-twolevel_namespace",
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = Pref360Control;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-				WRAPPER_EXTENSION = prefPane;
-			};
-			name = Default;
-		};
-		3BBDC6AA097946B50023AAD8 /* Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = "";
-				SDKROOT = "";
-			};
-			name = Development;
-		};
-		3BBDC6AB097946B50023AAD8 /* Deployment */ = {
+		3BBDC6AA097946B50023AAD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SDKROOT = "";
 			};
-			name = Deployment;
+			name = Debug;
 		};
-		3BBDC6AC097946B50023AAD8 /* Default */ = {
+		3BBDC6AB097946B50023AAD8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SDKROOT = "";
 			};
-			name = Default;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -482,22 +440,20 @@
 		3BBDC6A5097946B50023AAD8 /* Build configuration list for PBXNativeTarget "Pref360Control" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3BBDC6A6097946B50023AAD8 /* Development */,
-				3BBDC6A7097946B50023AAD8 /* Deployment */,
-				3BBDC6A8097946B50023AAD8 /* Default */,
+				3BBDC6A6097946B50023AAD8 /* Debug */,
+				3BBDC6A7097946B50023AAD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		3BBDC6A9097946B50023AAD8 /* Build configuration list for PBXProject "Pref360Control" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3BBDC6AA097946B50023AAD8 /* Development */,
-				3BBDC6AB097946B50023AAD8 /* Deployment */,
-				3BBDC6AC097946B50023AAD8 /* Default */,
+				3BBDC6AA097946B50023AAD8 /* Debug */,
+				3BBDC6AB097946B50023AAD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

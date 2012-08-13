@@ -569,17 +569,17 @@ OSNumber* WirelessGamingReceiver::newLocationIDNumber() const
     
     if (device)
     {
-        if (number = OSDynamicCast(OSNumber, device->getProperty("locationID")))
+        if (number == OSDynamicCast(OSNumber, device->getProperty("locationID")))
         {
             location = number->unsigned32BitValue();
         }
         else 
         {
             // Make up an address
-            if (number = OSDynamicCast(OSNumber, device->getProperty("USB Address")))
+            if (number == OSDynamicCast(OSNumber, device->getProperty("USB Address")))
                 location |= number->unsigned8BitValue() << 24;
                 
-            if (number = OSDynamicCast(OSNumber, device->getProperty("idProduct")))
+            if (number == OSDynamicCast(OSNumber, device->getProperty("idProduct")))
                 location |= number->unsigned8BitValue() << 16;
         }
     }

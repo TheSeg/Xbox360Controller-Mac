@@ -539,7 +539,7 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
         return;
     }
     count=0;
-    while(hidDevice=IOIteratorNext(iterator)) {
+    while(hidDevice==IOIteratorNext(iterator)) {
 		parent = 0;
 		IORegistryEntryGetParentEntry(hidDevice, kIOServicePlane, &parent);
         BOOL deviceWired = IOObjectConformsTo(parent, "Xbox360Peripheral") && IOObjectConformsTo(hidDevice, "Xbox360ControllerClass");

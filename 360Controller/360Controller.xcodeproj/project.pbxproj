@@ -231,7 +231,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd \"$TARGET_BUILD_DIR/$TARGET_NAME.kext/Contents\"\nmkdir PlugIns > /dev/null 2>&1\nrm -R PlugIns/Feedback360.plugin > /dev/null 2>&1\necho \"$SRCROOT/../Feedback360/build/Deployment/Feedback360.bundle\"\ncp -R \"$SRCROOT/../Feedback360/build/Deployment/Feedback360.bundle\" PlugIns/Feedback360.plugin\n# Renaming extension from bundle to a plugin? Could be naughty.";
+			shellScript = "cd \"$TARGET_BUILD_DIR/$TARGET_NAME.kext/Contents\"\nmkdir PlugIns > /dev/null 2>&1\nrm -R PlugIns/Feedback360.plugin > /dev/null 2>&1\necho \"$CONFIGURATION_BUILD_DIR/Feedback360.bundle\"\ncp -R \"$CONFIGURATION_BUILD_DIR/Feedback360.bundle\" PlugIns/Feedback360.plugin\n# Renaming extension from bundle to a plugin? Could be naughty.";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -261,7 +261,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3BBDC683097938A90023AAD8 /* Development */ = {
+		3BBDC683097938A90023AAD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
@@ -283,16 +283,12 @@
 				WRAPPER_EXTENSION = kext;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
-		3BBDC684097938A90023AAD8 /* Deployment */ = {
+		3BBDC684097938A90023AAD8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d11;
@@ -309,52 +305,26 @@
 				WRAPPER_EXTENSION = kext;
 				ZERO_LINK = NO;
 			};
-			name = Deployment;
+			name = Release;
 		};
-		3BBDC685097938A90023AAD8 /* Default */ = {
+		3BBDC687097938A90023AAD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.0.0d11;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
-				MODULE_NAME = com.mice.driver.Xbox360Controller;
-				MODULE_VERSION = 1.0.0d11;
-				PRODUCT_NAME = 360Controller;
-				WRAPPER_EXTENSION = kext;
-			};
-			name = Default;
-		};
-		3BBDC687097938A90023AAD8 /* Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SDKROOT = "";
 			};
-			name = Development;
+			name = Debug;
 		};
-		3BBDC688097938A90023AAD8 /* Deployment */ = {
+		3BBDC688097938A90023AAD8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_VERSION = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SDKROOT = "";
-				"SDKROOT[arch=x86_64]" = "";
 			};
-			name = Deployment;
-		};
-		3BBDC689097938A90023AAD8 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				SDKROOT = "";
-			};
-			name = Default;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -362,22 +332,20 @@
 		3BBDC682097938A90023AAD8 /* Build configuration list for PBXNativeTarget "360Controller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3BBDC683097938A90023AAD8 /* Development */,
-				3BBDC684097938A90023AAD8 /* Deployment */,
-				3BBDC685097938A90023AAD8 /* Default */,
+				3BBDC683097938A90023AAD8 /* Debug */,
+				3BBDC684097938A90023AAD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Release;
 		};
 		3BBDC686097938A90023AAD8 /* Build configuration list for PBXProject "360Controller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3BBDC687097938A90023AAD8 /* Development */,
-				3BBDC688097938A90023AAD8 /* Deployment */,
-				3BBDC689097938A90023AAD8 /* Default */,
+				3BBDC687097938A90023AAD8 /* Debug */,
+				3BBDC688097938A90023AAD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

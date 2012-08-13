@@ -188,7 +188,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3BBDC69409793BF60023AAD8 /* Development */ = {
+		3BBDC69409793BF60023AAD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -201,9 +201,9 @@
 				WRAPPER_EXTENSION = bundle;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
-		3BBDC69509793BF60023AAD8 /* Deployment */ = {
+		3BBDC69509793BF60023AAD8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -215,46 +215,25 @@
 				WRAPPER_EXTENSION = bundle;
 				ZERO_LINK = NO;
 			};
-			name = Deployment;
+			name = Release;
 		};
-		3BBDC69609793BF60023AAD8 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				PRODUCT_NAME = Feedback360;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Default;
-		};
-		3BBDC69809793BF60023AAD8 /* Development */ = {
+		3BBDC69809793BF60023AAD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SDKROOT = "";
 			};
-			name = Development;
+			name = Debug;
 		};
-		3BBDC69909793BF60023AAD8 /* Deployment */ = {
+		3BBDC69909793BF60023AAD8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SDKROOT = "";
 			};
-			name = Deployment;
-		};
-		3BBDC69A09793BF60023AAD8 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				SDKROOT = "";
-			};
-			name = Default;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -262,22 +241,20 @@
 		3BBDC69309793BF60023AAD8 /* Build configuration list for PBXNativeTarget "Feedback360" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3BBDC69409793BF60023AAD8 /* Development */,
-				3BBDC69509793BF60023AAD8 /* Deployment */,
-				3BBDC69609793BF60023AAD8 /* Default */,
+				3BBDC69409793BF60023AAD8 /* Debug */,
+				3BBDC69509793BF60023AAD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Release;
 		};
 		3BBDC69709793BF60023AAD8 /* Build configuration list for PBXProject "Feedback360" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3BBDC69809793BF60023AAD8 /* Development */,
-				3BBDC69909793BF60023AAD8 /* Deployment */,
-				3BBDC69A09793BF60023AAD8 /* Default */,
+				3BBDC69809793BF60023AAD8 /* Debug */,
+				3BBDC69909793BF60023AAD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
