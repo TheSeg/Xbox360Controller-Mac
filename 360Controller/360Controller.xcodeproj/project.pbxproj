@@ -19,6 +19,9 @@
 		3B36DCCF10B7817E00FFD769 /* chatpadkeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B36DCCA10B7817E00FFD769 /* chatpadkeys.h */; };
 		3BB5E09C09641F8200F83598 /* xbox360hid.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BB5E09B09641F8200F83598 /* xbox360hid.h */; };
 		3BCE45CA09638EBC00B69EDF /* ControlStruct.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BCE45C909638EBC00B69EDF /* ControlStruct.h */; };
+		8AA4337E1610F17D00647B62 /* Kernel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA4337D1610F17D00647B62 /* Kernel.framework */; };
+		8AA433891610F46000647B62 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA433881610F46000647B62 /* CoreFoundation.framework */; };
+		8AA4338B1610F55100647B62 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA4338A1610F55100647B62 /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +40,9 @@
 		3B36DCCA10B7817E00FFD769 /* chatpadkeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatpadkeys.h; sourceTree = "<group>"; };
 		3BB5E09B09641F8200F83598 /* xbox360hid.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = xbox360hid.h; sourceTree = "<group>"; };
 		3BCE45C909638EBC00B69EDF /* ControlStruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlStruct.h; sourceTree = "<group>"; };
-		8DA8362C06AD9B9200E5AC22 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
+		8AA4337D1610F17D00647B62 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
+		8AA433881610F46000647B62 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		8AA4338A1610F55100647B62 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA433891610F46000647B62 /* CoreFoundation.framework in Frameworks */,
+				8AA4338B1610F55100647B62 /* IOKit.framework in Frameworks */,
+				8AA4337E1610F17D00647B62 /* Kernel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +64,7 @@
 			children = (
 				247142CAFF3F8F9811CA285C /* Source */,
 				089C167CFE841241C02AAC07 /* Resources */,
+				8AA4337F1610F1E000647B62 /* External Frameworks and Libraries */,
 				19C28FB6FE9D52B211CA2CBB /* Products */,
 			);
 			name = 360Controller;
@@ -101,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				3B0F1276097B395B00127827 /* Feedback360.bundle */,
-				8DA8362C06AD9B9200E5AC22 /* Kernel.framework */,
 				32D94FCF0562CBF700B6AF17 /* Info.plist */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
 			);
@@ -128,6 +136,16 @@
 				3B36DCC810B7817E00FFD769 /* chatpadhid.h */,
 			);
 			name = ChatPad;
+			sourceTree = "<group>";
+		};
+		8AA4337F1610F1E000647B62 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8AA4338A1610F55100647B62 /* IOKit.framework */,
+				8AA433881610F46000647B62 /* CoreFoundation.framework */,
+				8AA4337D1610F17D00647B62 /* Kernel.framework */,
+			);
+			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,7 +329,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = "";
 			};
 			name = Debug;
@@ -321,7 +339,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_VERSION = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = "";
 			};
 			name = Release;

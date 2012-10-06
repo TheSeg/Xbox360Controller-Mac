@@ -15,6 +15,7 @@
 		3BE667180B9109C5009679FC /* WirelessHIDDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BE667170B9109C5009679FC /* WirelessHIDDevice.h */; };
 		3BE6671C0B910A02009679FC /* WirelessHIDDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3BE6671B0B910A02009679FC /* WirelessHIDDevice.cpp */; };
 		3BE6677B0B91DC55009679FC /* devices.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BE6677A0B91DC55009679FC /* devices.h */; };
+		8AA433831610F23600647B62 /* Kernel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA433821610F23500647B62 /* Kernel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +29,7 @@
 		3BE667170B9109C5009679FC /* WirelessHIDDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WirelessHIDDevice.h; sourceTree = "<group>"; };
 		3BE6671B0B910A02009679FC /* WirelessHIDDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WirelessHIDDevice.cpp; sourceTree = "<group>"; };
 		3BE6677A0B91DC55009679FC /* devices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = devices.h; sourceTree = "<group>"; };
-		8DA8362C06AD9B9200E5AC22 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
+		8AA433821610F23500647B62 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA433831610F23600647B62 /* Kernel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,8 +47,8 @@
 		089C166AFE841209C02AAC07 /* WirelessGamingReceiver */ = {
 			isa = PBXGroup;
 			children = (
+				8AA433811610F21D00647B62 /* External Framworks and Libraries */,
 				247142CAFF3F8F9811CA285C /* Source */,
-				8DA8362C06AD9B9200E5AC22 /* Kernel.framework */,
 				089C167CFE841241C02AAC07 /* Resources */,
 				19C28FB6FE9D52B211CA2CBB /* Products */,
 			);
@@ -82,6 +84,14 @@
 				1A224C3FFF42367911CA2CB7 /* WirelessGamingReceiver.cpp */,
 			);
 			name = Source;
+			sourceTree = "<group>";
+		};
+		8AA433811610F21D00647B62 /* External Framworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8AA433821610F23500647B62 /* Kernel.framework */,
+			);
+			name = "External Framworks and Libraries";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +247,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = "";
 			};
 			name = Debug;
@@ -248,7 +258,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = "";
 				SYMROOT = build;
 			};
