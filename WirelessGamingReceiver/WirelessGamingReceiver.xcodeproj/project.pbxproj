@@ -15,7 +15,6 @@
 		3BE667180B9109C5009679FC /* WirelessHIDDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BE667170B9109C5009679FC /* WirelessHIDDevice.h */; };
 		3BE6671C0B910A02009679FC /* WirelessHIDDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3BE6671B0B910A02009679FC /* WirelessHIDDevice.cpp */; };
 		3BE6677B0B91DC55009679FC /* devices.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BE6677A0B91DC55009679FC /* devices.h */; };
-		8AA433831610F23600647B62 /* Kernel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA433821610F23500647B62 /* Kernel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AA433831610F23600647B62 /* Kernel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

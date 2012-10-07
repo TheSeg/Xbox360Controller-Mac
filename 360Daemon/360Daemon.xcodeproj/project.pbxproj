@@ -10,8 +10,8 @@
 		3B7905000CE3F6A400ACB699 /* ForceFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7904FF0CE3F6A400ACB699 /* ForceFeedback.framework */; };
 		3B7A8E2C0CE14E38005BB45B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7A8E2B0CE14E38005BB45B /* IOKit.framework */; };
 		3B8698090CE2903100283CEC /* ControlPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8698080CE2903100283CEC /* ControlPrefs.m */; };
+		8A2F4F541620F4EB00647EC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		8DD76F9A0486AA7600D96B5E /* 360Daemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* 360Daemon.m */; settings = {ATTRIBUTES = (); }; };
-		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		8DD76F9F0486AA7600D96B5E /* 360Daemon.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859EA3029092ED04C91782 /* 360Daemon.1 */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */,
+				8A2F4F541620F4EB00647EC3 /* Foundation.framework in Frameworks */,
 				3B7A8E2C0CE14E38005BB45B /* IOKit.framework in Frameworks */,
 				3B7905000CE3F6A400ACB699 /* ForceFeedback.framework in Frameworks */,
 			);

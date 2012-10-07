@@ -19,7 +19,6 @@
 		3B36DCCF10B7817E00FFD769 /* chatpadkeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B36DCCA10B7817E00FFD769 /* chatpadkeys.h */; };
 		3BB5E09C09641F8200F83598 /* xbox360hid.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BB5E09B09641F8200F83598 /* xbox360hid.h */; };
 		3BCE45CA09638EBC00B69EDF /* ControlStruct.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BCE45C909638EBC00B69EDF /* ControlStruct.h */; };
-		8AA4337E1610F17D00647B62 /* Kernel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA4337D1610F17D00647B62 /* Kernel.framework */; };
 		8AA433891610F46000647B62 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA433881610F46000647B62 /* CoreFoundation.framework */; };
 		8AA4338B1610F55100647B62 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA4338A1610F55100647B62 /* IOKit.framework */; };
 /* End PBXBuildFile section */
@@ -40,9 +39,9 @@
 		3B36DCCA10B7817E00FFD769 /* chatpadkeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatpadkeys.h; sourceTree = "<group>"; };
 		3BB5E09B09641F8200F83598 /* xbox360hid.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = xbox360hid.h; sourceTree = "<group>"; };
 		3BCE45C909638EBC00B69EDF /* ControlStruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlStruct.h; sourceTree = "<group>"; };
-		8AA4337D1610F17D00647B62 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
-		8AA433881610F46000647B62 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
-		8AA4338A1610F55100647B62 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		8AA4337D1610F17D00647B62 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = System/Library/Frameworks/Kernel.framework; sourceTree = SDKROOT; };
+		8AA433881610F46000647B62 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		8AA4338A1610F55100647B62 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +51,6 @@
 			files = (
 				8AA433891610F46000647B62 /* CoreFoundation.framework in Frameworks */,
 				8AA4338B1610F55100647B62 /* IOKit.framework in Frameworks */,
-				8AA4337E1610F17D00647B62 /* Kernel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

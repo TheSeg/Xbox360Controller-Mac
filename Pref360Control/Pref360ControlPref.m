@@ -321,7 +321,7 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
     [self resetDisplay];
     i=[deviceList indexOfSelectedItem];
     if(([deviceArray count]==0)||(i==-1)) {
-        NSLog(@"No devices found? :( device count==%i, i==%i",[deviceArray count],i);
+        NSLog(@"No devices found? :( device count==%li, i==%i",[deviceArray count],i);
         return;
     }
     {
@@ -524,7 +524,7 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
     CFMutableDictionaryRef hidDictionary;
     IOReturn ioReturn;
     io_iterator_t iterator;
-    io_object_t hidDevice, parent;
+    io_object_t hidDevice = 0, parent;
     int count;
     DeviceItem *item;
     
