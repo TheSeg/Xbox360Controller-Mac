@@ -29,6 +29,7 @@
 	<key>CFBundleName</key>
 	<string>XBox 360 Controllers</string>
 	<key>NSPrefPaneIconLabel</key>
-	<string>Xbox 360\nControllers</string>
+	<string>Xbox 360
+Controllers</string>
 </dict>
 </plist>
