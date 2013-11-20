@@ -62,3 +62,6 @@ Included is an installer project for Iceberg. Download Iceberg at http://s.sudre
 Other information
 ---------------------
 I wrote the driver from scratch, using Apple documentation and drivers simply as a reference and not basing it upon any existing source. As such, some things may be done strangely or incorrectly, so excuse any weirdness. I've also tried to include comments to explain generally what's going on :)
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/TheSeg/xbox360controller-mac/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
