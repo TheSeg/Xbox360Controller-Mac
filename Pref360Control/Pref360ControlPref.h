@@ -1,6 +1,6 @@
 /*
     MICE Xbox 360 Controller driver for Mac OS X
-    Copyright (C) 2006-2012 Colin Munro
+    Copyright (C) 2006-2013 Colin Munro
     
     Pref360ControlPref.h - definition for the pref pane class
     
@@ -60,6 +60,7 @@
     IBOutlet NSProgressIndicator *rightTrigger;
     IBOutlet NSImageView *batteryLevel;
     IBOutlet DeviceLister *deviceLister;
+    IBOutlet NSButton *powerOff;
     // Internal info
     mach_port_t masterPort;
     NSMutableArray *deviceArray;
@@ -85,6 +86,7 @@
 - (void)handleDeviceChange;
 
 - (IBAction)showDeviceList:(id)sender;
+- (IBAction)powerOff:(id)sender;
 
 - (mach_port_t)masterPort;
 

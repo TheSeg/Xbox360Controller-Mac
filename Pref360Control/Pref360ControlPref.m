@@ -1,6 +1,6 @@
 /*
     MICE Xbox 360 Controller driver for Mac OS X
-    Copyright (C) 2006-2012 Colin Munro
+    Copyright (C) 2006-2013 Colin Munro
     
     Pref360ControlPref.m - main source of the pref pane
     
@@ -127,12 +127,12 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
         case 4:
             [leftTrigger setDoubleValue:value];
             largeMotor=value;
-            [self testMotorsLarge:largeMotor small:smallMotor];
+//            [self testMotorsLarge:largeMotor small:smallMotor];
             break;
         case 5:
             [rightTrigger setDoubleValue:value];
             smallMotor=value;
-            [self testMotorsLarge:largeMotor small:smallMotor];
+//            [self testMotorsLarge:largeMotor small:smallMotor];
             break;
         default:
             break;
@@ -276,6 +276,7 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
     [rightStickInvertY setState:NSOffState];
     // Disable inputs
     [self inputEnable:NO];
+    [powerOff setHidden:YES];
     // Hide battery icon
     bundle = [NSBundle bundleForClass:[self class]];
     [batteryLevel setImage:[[[NSImage alloc] initByReferencingFile:[bundle pathForResource:@"battNone" ofType:@"tif"]] autorelease]];
@@ -285,8 +286,8 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
 - (void)stopDevice
 {
     if(registryEntry==0) return;
-    [self testMotorsLarge:0 small:0];
-    [self setMotorOverride:FALSE];
+//    [self testMotorsLarge:0 small:0];
+//    [self setMotorOverride:FALSE];
 //    [self updateLED:0x00];
     if(hidQueue!=NULL) {
         CFRunLoopSourceRef eventSource;
@@ -319,9 +320,9 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
     IOReturn ret;
     
     [self resetDisplay];
-    i=[deviceList indexOfSelectedItem];
+    i=(int)[deviceList indexOfSelectedItem];
     if(([deviceArray count]==0)||(i==-1)) {
-        NSLog(@"No devices found? :( device count==%i, i==%i",[deviceArray count],i);
+        NSLog(@"No devices found? :( device count==%i, i==%i",(int)[deviceArray count],i);
         return;
     }
     {
@@ -482,8 +483,8 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
     [self inputEnable:YES];
     // Set LED and manual motor control
 //    [self updateLED:0x0a];
-    [self setMotorOverride:TRUE];
-    [self testMotorsLarge:0 small:0];
+//    [self setMotorOverride:TRUE];
+//    [self testMotorsLarge:0 small:0];
     largeMotor=0;
     smallMotor=0;
     // Battery level?
@@ -504,6 +505,7 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
                     path = [bundle pathForResource:[NSString stringWithFormat:@"batt%i", level / 64] ofType:@"tif"];
                 CFRelease(prop);
             }
+            [powerOff setHidden:NO];
         }
         if (path == nil)
             path = [bundle pathForResource:@"battNone" ofType:@"tif"];
@@ -539,7 +541,7 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
         return;
     }
     count=0;
-    while(hidDevice=IOIteratorNext(iterator)) {
+    while((hidDevice=IOIteratorNext(iterator))) {
 		parent = 0;
 		IORegistryEntryGetParentEntry(hidDevice, kIOServicePlane, &parent);
         BOOL deviceWired = IOObjectConformsTo(parent, "Xbox360Peripheral") && IOObjectConformsTo(hidDevice, "Xbox360ControllerClass");
@@ -552,7 +554,11 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
         item=[DeviceItem allocateDeviceItemForDevice:hidDevice];
         if(item==NULL) continue;
         // Add to item
-        [deviceList addItemWithTitle:[NSString stringWithFormat:@"Controller %i (%@)",++count, deviceWireless ? @"Wireless" : @"Wired"]];
+        NSString *name;
+        name = [item name];
+        if (name == nil)
+            name = @"Generic Controller";
+        [deviceList addItemWithTitle:[NSString stringWithFormat:@"%i: %@ (%@)", ++count, name, deviceWireless ? @"Wireless" : @"Wired"]];
         [deviceArray addObject:item];
     }
     IOObjectRelease(iterator);
@@ -691,6 +697,20 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
 - (IBAction)showDeviceList:(id)sender
 {
     [deviceLister showWithOwner:self];
+}
+
+- (IBAction)powerOff:(id)sender
+{
+    FFEFFESCAPE escape;
+    
+    if(ffDevice==0) return;
+    escape.dwSize=sizeof(escape);
+    escape.dwCommand=0x03;
+    escape.cbInBuffer=0;
+    escape.lpvInBuffer=NULL;
+    escape.cbOutBuffer=0;
+    escape.lpvOutBuffer=NULL;
+    FFDeviceEscape(ffDevice,&escape);
 }
 
 @end

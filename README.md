@@ -1,6 +1,6 @@
 XBox 360 Controller driver for Mac OS X
 =====================
-Copyright (C) 2006-2012 Colin Munro
+Copyright (C) 2006-2013 Colin Munro
 
 http://tattiebogle.net/index.php/ProjectRoot/Xbox360Controller
 
@@ -22,13 +22,12 @@ The driver exposes a standard game pad with a number of standard controls, so an
 
 Known Problems/Todo
 ---------------------
-*	The rumble motor test on the triggers of the Preference Pane bypasses the Force Feedback Framework functionality, so isn't actually testing it. It really should, for completeness (and it'd help adding support for more complex effects)
+* The rumble motor test on the triggers of the Preference Pane bypasses the Force Feedback Framework functionality, so isn't actually testing it. It really should, for completeness (and it'd help adding support for more complex effects) - this test is now disabled in the normal release anyway
 * Force Feedback plugin may make effects run slower (e.g. longer time) than they should
 * Driver probably needs to be more resilient to errors and odd cases
 * Better Force Feedback "emulation"
 * Extra settings? E.g. trigger deadzones, control remapping.
 * Someone has requested old Xbox Controller support too.
-* Still working on ChatPad support
 
 Contact me
 ---------------------

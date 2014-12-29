@@ -1,6 +1,6 @@
 /*
  MICE Xbox 360 Controller driver for Mac OS X
- Copyright (C) 2006-2012 Colin Munro
+ Copyright (C) 2006-2013 Colin Munro
  
  360Daemon.m - main functionality of the support daemon
  
@@ -30,6 +30,9 @@
 #include "ControlPrefs.h"
 
 #define CHECK_SHOWAGAIN     @"Do not show this message again"
+
+#define INSTALL_PATH        @"/Library/Application Support/MICE/360Daemon"
+#define RESOURCE_PATH       INSTALL_PATH @"/Resources"
 
 mach_port_t masterPort;
 IONotificationPortRef notifyPort;
@@ -73,7 +76,7 @@ static void callbackAlert(CFUserNotificationRef userNotification, CFOptionFlags 
     [pool release];
 }
 
-void ShowAlert(int index)
+static void ShowAlert(int index)
 {
     SInt32 error;
     NSArray *checkBoxes = [NSArray arrayWithObjects:CHECK_SHOWAGAIN, nil];
@@ -87,7 +90,7 @@ void ShowAlert(int index)
         @"XBox 360 Controller Driver",
         alertStrings[index],
         checkBoxes,
-        [NSURL fileURLWithPath:@"/Library/StartupItems/360ControlDaemon/Resources/Alert.tif"],
+        [NSURL fileURLWithPath:RESOURCE_PATH @"/Alert.tif"],
         nil];
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:dictValues forKeys:dictKeys];
     

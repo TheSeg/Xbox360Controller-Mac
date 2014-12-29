@@ -1,6 +1,6 @@
 /*
     MICE Xbox 360 Controller driver for Mac OS X
-    Copyright (C) 2006-2012 Colin Munro
+    Copyright (C) 2006-2013 Colin Munro
     
     DeviceItem.h - declaration of wrapper class for device handles
     
@@ -31,10 +31,12 @@
     IOHIDDeviceInterface122 **interface;
     FFDeviceObjectReference forceFeedback;
     io_service_t deviceHandle;
+    NSString *deviceName;
 }
 
 + allocateDeviceItemForDevice:(io_service_t)device;
 
+- (NSString*)name;
 - (IOHIDDeviceInterface122**)hidDevice;
 - (FFDeviceObjectReference)ffDevice;
 - (io_service_t)rawDevice;

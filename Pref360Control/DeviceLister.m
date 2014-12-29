@@ -1,6 +1,6 @@
 /*
  MICE Xbox 360 Controller driver for Mac OS X
- Copyright (C) 2006-2012 Colin Munro
+ Copyright (C) 2006-2013 Colin Munro
  
  DeviceLister.m - implementation of a class to list supported devices
  
@@ -286,7 +286,7 @@ static BOOL IsXBox360Controller(io_service_t device)
             continue;
         NSUInteger vendor = [[values objectAtIndex:1] intValue];
         NSUInteger product = [[values objectAtIndex:2] intValue];
-        NSNumber *key = [NSNumber numberWithUnsignedInt:(vendor << 16) | product];
+        NSNumber *key = [NSNumber numberWithUnsignedInt:(int)((vendor << 16) | product)];
         [enabled addObject:key];
         if ([entries objectForKey:key] == nil)
             [entries setObject:SanitiseName([values objectAtIndex:0]) forKey:key];
@@ -364,7 +364,7 @@ static BOOL IsXBox360Controller(io_service_t device)
                                      defaultButton:nil
                                    alternateButton:nil
                                        otherButton:nil
-                         informativeTextWithFormat:message];
+                         informativeTextWithFormat:@"%@", message];
     [alert runModal];
 }
 

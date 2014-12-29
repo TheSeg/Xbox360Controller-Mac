@@ -50,7 +50,7 @@ if [ $? -ne 0 ]
     exit 1
 fi
 cd ../Install360Controller
-freeze Install360Controller.packproj
+packagesbuild -v Install360Controller.pkgproj
 mv build 360ControllerInstall
 hdiutil create -srcfolder 360ControllerInstall -format UDZO ../../360ControllerInstall.dmg
 mv 360ControllerInstall build
@@ -63,4 +63,13 @@ lipo -info Pref360Control/build/Deployment/Pref360Control.prefPane/Contents/MacO
 lipo -info Pref360Control/build/Deployment/Pref360Control.prefPane/Contents/Resources/DriverTool
 lipo -info WirelessGamingReceiver/build/Release/WirelessGamingReceiver.kext/Contents/MacOS/WirelessGamingReceiver
 lipo -info Wireless360Controller/build/Release/Wireless360Controller.kext/Contents/MacOS/Wireless360Controller
+echo "** File signatures **"
+sudo spctl -a -v 360Controller/build/Deployment/360Controller.kext
+sudo spctl -a -v 360Controller/build/Deployment/360Controller.kext/Contents/PlugIns/Feedback360.plugin
+sudo spctl -a -v 360Daemon/build/Release/360Daemon
+sudo spctl -a -v Pref360Control/build/Deployment/Pref360Control.prefPane
+sudo spctl -a -v Pref360Control/build/Deployment/Pref360Control.prefPane/Contents/Resources/DriverTool
+sudo spctl -a -v WirelessGamingReceiver/build/Release/WirelessGamingReceiver.kext
+sudo spctl -a -v Wireless360Controller/build/Release/Wireless360Controller.kext
+sudo spctl -a -v --type install Install360Controller/build/Install360Controller.pkg
 echo "*** DONE ***"

@@ -1,6 +1,6 @@
 /*
     MICE Xbox 360 Controller driver for Mac OS X
-    Copyright (C) 2006-2012 Colin Munro
+    Copyright (C) 2006-2013 Colin Munro
     
     main.h - defines the structure used for the plugin COM object
     
@@ -53,4 +53,6 @@ typedef struct _Xbox360ForceFeedback {
 #define FeedbackDriverUuid CFUUIDGetConstantUUIDWithBytes(NULL, 	\
     0xB8, 0xED, 0x27, 0x8F, 0xEC, 0x8A, 0x4E, 0x8E, 					\
     0xB4, 0xCF, 0x13, 0xE2, 0xA9, 0xD6, 0x8E, 0x83)
-    
+
+// Factory function
+void* Control360Factory(CFAllocatorRef allocator,CFUUIDRef uuid);

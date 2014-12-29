@@ -1,6 +1,6 @@
 /*
     MICE Xbox 360 Controller driver for Mac OS X
-    Copyright (C) 2006-2012 Colin Munro
+    Copyright (C) 2006-2013 Colin Munro
     
     main.c - Main code for the FF plugin
     
@@ -245,6 +245,12 @@ static HRESULT Feedback360Escape(void *that,FFEffectDownloadID downloadID,FFEFFE
                 unsigned char buf[]={0x01,0x03,data[0]};
                 Device_Send(&this->device,buf,sizeof(buf));
             }
+            break;
+        case 0x03:  // Power off
+        {
+            unsigned char buf[] = {0x02, 0x02};
+            Device_Send(&this->device, buf, sizeof(buf));
+        }
             break;
         default:
             fprintf(stderr, "Xbox360Controller FF plugin: Unknown escape (%i)\n", (int)escape->dwCommand);
